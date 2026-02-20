@@ -2,18 +2,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    line-height: 1.5;
 }
 
 :root {
     --grey-50: #F9FAFB;
+    --grey-200: #E5E7EB;
     --grey-300: #D1D5DB;
     --grey-500: #6B7280;
     --grey-700: #374151;
+    --grey-900: #111827;
     --content-x-padding: 2.5rem;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 body {
@@ -68,6 +71,9 @@ nav > ul > li > a {
     font-weight: 700;
 }
 
+/*****************
+* SEARCH SECTION *
+******************/
 #search-section {
     position: absolute;
     transform: translateY(calc(-50% - var(--content-y-padding)));
@@ -116,16 +122,21 @@ nav > ul > li > a {
 .search-button {
     color: var(--grey-700);
     padding: 8px 32px;
-    border: 1px solid var( --grey-300);
+    border: 1px solid var(--grey-300);
     border-left: none;
     border-radius: 0 6px 6px 0;
     background-color: var(--grey-50);
 }
 
+/*****************
+* RESULT SECTION *
+******************/
 #results-section {
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
 }
+
 .results-section-placeholder {
     display: flex;
     flex-direction: column;
@@ -134,4 +145,72 @@ nav > ul > li > a {
     margin: auto;
     color: #DFDDDD;
     gap: 0.5rem;
+    font-weight: 700;
+}
+
+.results-section-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+}
+
+.results-section-card:not(:last-child) {
+    border-bottom: 1px solid var(--grey-200);
+}
+
+.results-section-card-img-container {
+    border-radius: 3px;
+    width: 100px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.results-section-card-img-container img {
+    width: 100%;
+}
+
+.result-section-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: center;
+}
+.result-section-card-title-score-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.result-section-card-title {
+    font-weight: 600;
+}
+
+.result-section-card-score {
+    font-size: 0.75rem;
+}
+
+.result-section-card-duration-genre-btn-container {
+    font-size: 0.75rem;
+    display: flex;
+    gap: 1.25rem;
+}
+.add-to-watchlist-button {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--grey-900);
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: auto;
+}
+.result-section-card-description {
+    color: var(--grey-500);
+    font-size: 0.875rem;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
