@@ -1,0 +1,102 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grey-50: #F9FAFB;
+    --grey-300: #D1D5DB;
+    --grey-500: #6B7280;
+    --grey-700: #374151;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: #333333;
+}
+
+header {
+    background-image: url("./images/hero.jpg");
+    background-color: #444;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: -158px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+
+main {
+    padding: 0 2.5rem;
+
+}
+
+h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: whitesmoke;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+nav > ul > li > a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.search-input-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px 0 0 6px;
+    border: 1px solid var( --grey-300);
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+    color: var(--grey-500);
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    color: var(--grey-500);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: var(--grey-500);
+}
+
+.search-button {
+    color: var(--grey-700);
+    padding: 8px 32px;
+    border: 1px solid var( --grey-300);
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    background-color: var(--grey-50);
+}
+
