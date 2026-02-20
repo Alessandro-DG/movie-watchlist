@@ -126,6 +126,7 @@ nav > ul > li > a {
     border-left: none;
     border-radius: 0 6px 6px 0;
     background-color: var(--grey-50);
+    cursor: pointer;
 }
 
 /*****************
@@ -159,14 +160,14 @@ nav > ul > li > a {
     border-bottom: 1px solid var(--grey-200);
 }
 
-.results-section-card-img-container {
+.results-section-card-poster-container {
     border-radius: 3px;
     width: 100px;
     height: 150px;
     overflow: hidden;
 }
 
-.results-section-card-img-container img {
+.results-section-card-poster-container img {
     width: 100%;
 }
 
@@ -176,7 +177,7 @@ nav > ul > li > a {
     gap: 0.8rem;
     justify-content: center;
 }
-.result-section-card-title-score-container {
+.result-section-card-title-rating-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -186,7 +187,7 @@ nav > ul > li > a {
     font-weight: 600;
 }
 
-.result-section-card-score {
+.result-section-card-rating {
     font-size: 0.75rem;
 }
 
@@ -205,7 +206,7 @@ nav > ul > li > a {
     background-color: transparent;
     margin-left: auto;
 }
-.result-section-card-description {
+.result-section-card-plot {
     color: var(--grey-500);
     font-size: 0.875rem;
     width: 100%;
