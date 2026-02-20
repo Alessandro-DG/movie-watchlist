@@ -96,5 +96,19 @@ document.addEventListener("click", (event) => {
         }
         watchlist.push(event.target.dataset.imdbid)
         localStorage.setItem("watchlist", JSON.stringify(watchlist))
+        event.target.classList.add("hidden")
+        event.target.nextElementSibling.classList.remove("hidden")
+    }
+
+    if(event.target.classList.contains("remove-from-watchlist-button")) {
+        if(! watchlist.includes(event.target.dataset.imdbid)) {
+            alert("Movie already removed to watchlist")
+            return
+        }
+        watchlist = watchlist.filter(imdbId => imdbId !== event.target.dataset.imdbid)
+        console.log(watchlist)
+        localStorage.setItem("watchlist", JSON.stringify(watchlist))
+        event.target.classList.add("hidden")
+        event.target.previousElementSibling.classList.remove("hidden")
     }
 })
