@@ -196,7 +196,8 @@ nav > ul > li > a {
     display: flex;
     gap: 1.25rem;
 }
-.add-to-watchlist-button {
+.add-to-watchlist-button,
+.remove-from-watchlist-button {
     display: flex;
     align-items: center;
     gap: 0.35rem;
