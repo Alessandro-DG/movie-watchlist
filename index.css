@@ -11,6 +11,7 @@
     --grey-300: #D1D5DB;
     --grey-500: #6B7280;
     --grey-700: #374151;
+    --grey-800: #363636;
     --grey-900: #111827;
     --content-x-padding: 2.5rem;
 }
@@ -147,6 +148,18 @@ nav > ul > li > a {
     color: #DFDDDD;
     gap: 0.5rem;
     font-weight: 700;
+}
+
+.results-section-placeholder > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--grey-800);
+    gap: 0.5rem;
+}
+
+.results-section-placeholder > a:hover {
+    text-decoration: underline;
 }
 
 .results-section-card {
